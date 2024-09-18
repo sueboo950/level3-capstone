@@ -1,7 +1,4 @@
-let apikey = 'YOUR_API_KEY';
-let accesstoken = apikey;
-
-async function getBibleVerse(inputKeyword, accessToken) {
+function getBibleVerse(inputText) {
     const bibleVerses = {
         love: "1 Corinthians 13:4-5 - Love is patient, love is kind. It does not envy, it does not boast, it is not proud.",
         faith: "Hebrews 11:1 - Now faith is confidence in what we hope for and assurance about what we do not see.",
@@ -20,41 +17,32 @@ async function getBibleVerse(inputKeyword, accessToken) {
         sick: "James 5:14 - Is anyone among you sick? Let him call for the elders of the church, and let them pray over him, anointing him with oil in the name of the Lord."
     };
 
-    const localVerse = bibleVerses[inputKeyword.toLowerCase()];
-    if (localVerse) {
-        return localVerse;
-    }
-
-    const storedVerse = localStorage.getItem(inputKeyword.toLowerCase());
-    if (storedVerse) {
-        return storedVerse;
-    }
-
-    const baseUrl = 'https://api.biblegateway.com/2/bible/osis/';
-    const url = `${baseUrl}${inputKeyword}/NIV?access_token=${accessToken}`;
-
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
+    const inputWords = inputText.toLowerCase().split(/\W+/);
+    for (const word of inputWords) {
+        if (bibleVerses[word]) {
+            return bibleVerses[word];
         }
-        const data = await response.json();
-        const verseText = data.text; // Adjust this based on the actual API response structure
-        localStorage.setItem(inputKeyword.toLowerCase(), verseText);
-        return verseText;
-    } catch (error) {
-        console.error('There has been a problem with your fetch operation:', error);
-        return 'An error occurred while fetching the Bible verse.';
     }
+    return 'No verse found for this keyword.';
 }
 
 function handlePrayerRequest() {
     const userInput = document.getElementById('prayer-requestInput').value;
-    const accessToken = 'your_access_token_here'; // Replace with your actual access token
-    getBibleVerse(userInput, accessToken).then(verse => {
-        const resultDiv = document.getElementById('result');
-        resultDiv.textContent = verse;
-    });
+    localStorage.setItem('lastPrayerRequest', userInput);
+    const verse = getBibleVerse(userInput);
+    const resultDiv = document.getElementById('result');
+    resultDiv.textContent = verse;
 }
 
+function loadLastPrayerRequest() {
+    const lastPrayerRequest = localStorage.getItem('lastPrayerRequest');
+    if (lastPrayerRequest) {
+        document.getElementById('prayer-requestInput').value = lastPrayerRequest;
+        const verse = getBibleVerse(lastPrayerRequest);
+        const resultDiv = document.getElementById('result');
+        resultDiv.textContent = verse;
+    }
+}
 
+// Call loadLastPrayerRequest when the page loads
+window.onload = loadLastPrayerRequest;

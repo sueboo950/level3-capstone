@@ -17,18 +17,15 @@
                 <h1>Prayer Request</h1>
                 <div class="hero-paragraph">
                     <p></p>
-
                 </div>
                 <div class="hero-form">
                     <input type="text" name="nameInput" id="nameInput" placeholder="Your Name.."> <br>
                     <input type="text" name="numberInput" id="numberInput" placeholder="Your Phone Number.."> <br>
                     <input type="text" name="emailInput" id="emailInput" placeholder="Your Email..."> <br>
-                    <input type="paragraph" name="prayer-requestInput" id="prayer-requestInput" rows="20" placeholder="Your Prayer Request..." size="100" style="width: 200px; height: 100px;px;"> <br>
-                    <button>Click to Request Prayer</button>
+                    <textarea name="prayer-requestInput" id="prayer-requestInput" rows="4" placeholder="Your Prayer Request..." style="width: 200px; height: 100px;"></textarea> <br>
+                    <button onclick="handlePrayerRequest()">Click to Request Prayer</button>
                 </div>
                 <div class="card">
-                    <!--leave card-body <p> blank for DOM Output. This is where when 
-                        they click the button to submit, the bible keyword verse will appear-->
                     <div class="card-body">
                         <p id="result"></p>
                     </div>
@@ -42,7 +39,7 @@
             </div>
         </div>
     </header>
-    <script src="bible-prayer-app.js"></script>
+    <script src="bible-prayer.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
