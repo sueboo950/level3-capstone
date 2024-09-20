@@ -14,7 +14,7 @@ async function fetchAndDisplayVerse() {
 }
 
 function displayVerse(data) {
-    const verseContainer = document.getElementById('verseContainer');
+    const verseContainer = document.getElementById('KeywordInput');
     verseContainer.innerHTML = `
         <p>${data.reference}</p>
         <p>${data.text}</p>
