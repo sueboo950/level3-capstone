@@ -1,6 +1,6 @@
 async function fetchAndDisplayVerse() {
-    const userInput = document.getElementById('verseInput').value;
-    const url = `https://bible-api.com/${encodeURIComponent(userInput)}?verse_numbers=true`;
+    const userInput = document.getElementById('keywordInput').value;
+    const url = `https://bible-api.com/${userInput}`;
 
     try {
         let response = await fetch(url);
@@ -14,7 +14,7 @@ async function fetchAndDisplayVerse() {
 }
 
 function displayVerse(data) {
-    const verseContainer = document.getElementById('KeywordInput');
+    const verseContainer = document.getElementById('verseContainer');
     verseContainer.innerHTML = `
         <p>${data.reference}</p>
         <p>${data.text}</p>
