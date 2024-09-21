@@ -142,6 +142,28 @@ let trivia = [
             "True",
         ]
     },
+    {
+        question: "The 5000 people were fed with five loaves and two fish",
+        answer: "True",
+        distractors:[
+            "False",
+        ]
+    },
+    {
+        question: "Jesus healed Martha of her blindness",
+        answer: "False",
+        distractors:[
+            "True",
+        ]
+    },
+    {
+        question: "Jesus turned water into wine at a wedding in Jericho",
+        answer: "False",
+        distractors:[
+            "True",
+        ]
+    },
+
 ];
 
 let currentQuestionIndex = 0;
