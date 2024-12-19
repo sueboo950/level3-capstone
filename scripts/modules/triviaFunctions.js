@@ -1,10 +1,12 @@
-let currentQuestionIndex = 0;
-let score = 0;
+import { shuffleArray } from '../utils/utils.js';
+
+export let currentQuestionIndex = 0;
+export let score = 0;
 
 export function displayTrivia(trivia) {
     if (currentQuestionIndex < trivia.length) {
         const questionObj = trivia[currentQuestionIndex];
-        const choices = [...questionObj.distractors, questionObj.answer].sort(() => Math.random() - 0.5);
+        const choices = shuffleArray([...questionObj.distractors, questionObj.answer]);
 
         document.getElementById('question').innerText = questionObj.question;
         const choicesContainer = document.getElementById('choices');
@@ -24,7 +26,7 @@ export function displayTrivia(trivia) {
     }
 }
 
-function checkAnswer(selected, correct) {
+export function checkAnswer(selected, correct) {
     if (selected === correct) {
         score++;
     }
