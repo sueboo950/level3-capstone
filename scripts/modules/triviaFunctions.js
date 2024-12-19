@@ -1,35 +1,27 @@
-import { shuffleArray } from '../utils/utils.js';
-
-export let currentQuestionIndex = 0;
-export let score = 0;
-
 export function displayTrivia(trivia) {
+    const questionContainer = document.getElementById('question');
+    const choicesContainer = document.getElementById('choices');
+
     if (currentQuestionIndex < trivia.length) {
         const questionObj = trivia[currentQuestionIndex];
         const choices = shuffleArray([...questionObj.distractors, questionObj.answer]);
 
-        document.getElementById('question').innerText = questionObj.question;
-        const choicesContainer = document.getElementById('choices');
-        choicesContainer.innerHTML = '';
+        // Create and display question using Card
+        const questionCard = new Card("question", questionObj.question);
+        questionContainer.innerHTML = questionCard.generateCard();
 
-        choices.forEach(choice => {
-            const button = document.createElement('button');
-            button.innerText = choice;
-            button.classList.add('btn', 'btn-primary', 'm-2');
-            button.onclick = () => checkAnswer(choice, questionObj.answer);
-            choicesContainer.appendChild(button);
+        // Create and display choices using ListGroup
+        const choicesList = new ListGroup(choices);
+        choicesContainer.innerHTML = choicesList.generateListGroup();
+
+        // Attach event listeners to choices
+        const choiceButtons = choicesContainer.querySelectorAll('.list-group-item');
+        choiceButtons.forEach(button => {
+            button.onclick = () => checkAnswer(button.textContent, questionObj.answer);
         });
     } else {
-        document.getElementById('question').innerText = 'Trivia Completed!';
-        document.getElementById('choices').innerHTML = '';
+        questionContainer.innerHTML = 'Trivia Completed!';
+        choicesContainer.innerHTML = '';
         document.getElementById('score').innerText = `Your final score is: ${score}`;
     }
-}
-
-export function checkAnswer(selected, correct) {
-    if (selected === correct) {
-        score++;
-    }
-    currentQuestionIndex++;
-    displayTrivia(trivia);
 }
