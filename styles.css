@@ -1,0 +1,46 @@
+body {
+    background-color: #970c90; /* Example background color */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    color: #333; /* Default text color for better readability */
+    font-family: Arial, sans-serif; /* Example font family */
+}
+
+h1 {
+    color: #fff; /* Example color for the heading text */
+    text-align: center; /* Center align the heading */
+    margin-top: 50px; /* Example margin from the top */
+}
+
+#question, #choices, #score {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the divs */
+    margin: 20px auto; /* Center align and margin around the divs */
+    width: 80%; /* Example width */
+    max-width: 600px; /* Max width to make it responsive */
+}
+
+/* styles.css */
+
+.submit-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2%;
+}
+
+button#submitButton {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button#submitButton:disabled {
+    background-color: #4f0752; /* Grey background for disabled state */
+    cursor: not-allowed; /* Not allowed cursor for disabled state */
+}
+
