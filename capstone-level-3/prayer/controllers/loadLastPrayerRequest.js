@@ -4,10 +4,15 @@ export function loadLastPrayerRequest() {
     const lastPrayerRequest = localStorage.getItem('lastPrayerRequest');
     if (lastPrayerRequest) {
         document.getElementById('prayer-requestInput').value = lastPrayerRequest;
-        const verse = getBibleVerse(lastPrayerRequest);
+        const userName = document.getElementById('nameInput').value || "Guest";
+        const verse = getBibleVerse(lastPrayerRequest, userName);
         const resultDiv = document.getElementById('result');
-        resultDiv.textContent = verse;
+        if (resultDiv) {
+            resultDiv.textContent = verse;
+        }
     }
 }
 
 window.onload = loadLastPrayerRequest;
+
+

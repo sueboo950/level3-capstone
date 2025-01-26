@@ -1,9 +1,7 @@
 import { shuffleArray } from '../utils/shuffleArray.js';
 import { checkAnswer } from './checkAnswer.js';
 import { trivia } from '../modules/triviaData.js';
-
-let currentQuestionIndex = 0;
-let score = 0;
+import { currentQuestionIndex, score } from './triviaState.js';
 
 export function displayTrivia() {
     if (currentQuestionIndex < trivia.length) {

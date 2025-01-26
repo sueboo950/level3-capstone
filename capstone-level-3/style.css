@@ -1,5 +1,5 @@
 .hero-image {
-    background-image: linear-gradient(rgba(256,256,256,0), rgba(256,256,256,1)), url(prayerwithbible.png);
+    background-image: linear-gradient(rgba(256,256,256,0), rgba(256,256,256,1)), url(/capstone-level-3/images/prayerwithbible.png);
     height: 85vh;
     background-size: cover;
     position: relative;
