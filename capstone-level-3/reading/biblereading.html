@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/capstone-level-3/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<nav></nav>
+<button type="button" class="btn btn-light"><a href="/capstone-level-3/index.html">Home</a></button>
+<button type="button" class="btn btn-light"><a href="/capstone-level-3/about.html">About the Designer</a></button>
+<button type="button" class="btn btn-light"><a href="../prayer/prayerrequest.html">Prayer Request</a></button>
+<button type="button" class="btn btn-light"><a href="../trivia/triviagame.html">Bible Trivia Game</a></button>
+</nav>
+
+<body>
+    <header>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>Bible Reading</h1>
+                <div class="hero-paragraph">
+                    <p></p>
+                </div>
+                <div class="hero-form">
+                    <input type="text" name="keywordInput" id="keywordInput" placeholder="Enter Bible Details..">
+                    <b>
+                        <p>Enter the book name and/or book & verse to search for reading.</p>
+                    </b>
+                    <button onclick="fetchAndDisplayVerse()">Find Verse</button>
+                </div>
+                <div class="card">
+                    <div class="card-body" id="verseContainer">
+
+                    </div>
+                </div>
+                <div id="errorContainer"></div>
+                <div class="container text-justify" style="width: fit-content; align-content: end;">
+                    <h3>Help Resources....</h3>
+                    <a href="https://www.211.org/">211.org</a>
+                    <a href="https://www.nimh.nih.gov/health/topics/suicide-prevention">Suicide Prevention</a>
+                    <a href="https://alladdictsanonymous.org/">Addiction Anonymous</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script type="module" src="/capstone-level-3/reading/controllers/eventListeners.js"></script>
+    <script type="module" src="/capstone-level-3/reading/controllers/fetchAndDisplayVerse.js"></script>
+    <script type="module" src="/capstone-level-3/reading/modules/displayErrorMessage.js"></script>
+    <script type="module" src="/capstone-level-3/reading/modules/displayVerse.js"></script>
+    <script type="module" src="/capstone-level-3/reading/utils/getFromLocalStorage.js"></script>
+    <script type="module" src="/capstone-level-3/reading/utils/saveToLocalStorage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

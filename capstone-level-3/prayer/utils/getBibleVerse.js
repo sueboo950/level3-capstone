@@ -30,16 +30,21 @@ export function getBibleVerse(inputText = "", userName = "Guest") {
     }
 
     const messageContainer = document.getElementById('messageContainer');
-    if (verseFound) {
-        messageContainer.innerHTML = `
-            Hi ${userName}! We want to thank you for your prayer request, someone will reach out to you shortly. According to your request, please see the Bible verse below for your reading.
-            <p>${verse}</p>
-        `;
-    } else {
-        messageContainer.innerHTML = `
-            Thank you for your request! Someone will reach out to you within 48 hours.
-        `;
+    if (messageContainer) {
+        // Clear previous content
+        messageContainer.innerHTML = "";
+
+        if (verseFound) {
+            messageContainer.innerHTML = `
+                Hi ${userName}! We want to thank you for your prayer request, someone will reach out to you shortly. According to your request, please see the Bible verse below for your reading.
+            `;
+        } else {
+            messageContainer.innerHTML = `
+                Thank you for your request! Someone will reach out to you within 48 hours.
+            `;
+        }
     }
 
     return verse;
 }
+

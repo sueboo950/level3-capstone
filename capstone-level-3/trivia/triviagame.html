@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Trivia</title>
+    <link rel="stylesheet" href="/capstone-level-3/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<nav>
+    <button type="button" class="btn btn-light"><a href="/capstone-level-3/index.html">Home</a></button>
+    <button type="button" class="btn btn-light"><a href="/capstone-level-3/about.html">About the Designer</a></button>
+    <button type="button" class="btn btn-light"><a href="../prayer/prayerrequest.html">Prayer Request</a></button>
+    <button type="button" class="btn btn-light"><a href="../reading/biblereading.html">Bible Reading App</a></button>
+</nav>
+
+<body>
+    <header>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>Bible Trivia</h1>
+                <div class="hero-paragraph">
+                    <p>Test your knowledge with these Bible trivia questions!</p>
+                </div>
+                <div class="hero-form">
+                    <button onclick="displayTrivia(trivia)">Start Trivia</button>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div id="trivia-container">
+                            <h2 id="question"></h2>
+                            <div id="choices"></div>
+                            <p id="score"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container text-justify" style="width: fit-content; align-content: end;">
+                    <h3>Help Resources....</h3>
+                    <a href="http://www.211.org/">211.org</a> <br>
+                    <a href="http://www.nimh.nih.gov/health/topics/suicide-prevention">Suicide Prevention</a> <br>
+                    <a href="http://alladdictsanonymous.org/">Addiction Anonymous</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script type="module" src="/capstone-level-3/trivia/controllers/checkAnswer.js"></script>
+    <script type="module" src="/capstone-level-3/trivia/controllers/displayTrivia.js"></script>
+    <script type="module" src="/capstone-level-3/trivia/controllers/eventListeners.js"></script>
+    <script type="module" src="/capstone-level-3/trivia/modules/triviaData.js"></script>
+    <script type="module" src="/capstone-level-3/trivia/utils/shuffleArray.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

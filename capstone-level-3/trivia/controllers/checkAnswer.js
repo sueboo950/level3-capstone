@@ -1,10 +1,10 @@
 import { displayTrivia } from './displayTrivia.js';
-import { trivia } from '../modules/triviaData.js';
+import { incrementQuestionIndex, incrementScore } from './triviaState.js';
 
 export function checkAnswer(selected, correct) {
     if (selected === correct) {
-        score++;
+        incrementScore();
     }
-    currentQuestionIndex++;
-    displayTrivia(trivia);
+    incrementQuestionIndex();
+    displayTrivia();
 }
