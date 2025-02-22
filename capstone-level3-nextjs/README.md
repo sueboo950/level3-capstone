@@ -6,7 +6,7 @@ With the use of Next.js, webpack and babel is already installed with in the fold
 
 Below are details about the project along with how to clone this project with steps for using React/Next.js. Click the below link to see the deployment via vercel.com.
 
-Deployment: ![Bible Prayer, Reading, and Trivia App]()
+Deployment: ![Bible Prayer, Reading, and Trivia App](https://level3-capstone.vercel.app/)
 
 ## About the Project
 
