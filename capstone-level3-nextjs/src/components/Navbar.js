@@ -76,13 +76,13 @@ const prayerNavbar = () => {
                     <Link href="/">Home</Link>
                 </li>
                 <li>
+                    <Link href="/about">About</Link>
+                </li>
+                <li>
                     <Link href="/reading">Reading</Link>
                 </li>
                 <li>
-                    <Link href="/prayer-request">Prayer Request</Link>
-                </li>
-                <li>
-                    <Link href="/bible-trivia">Bible Trivia</Link>
+                    <Link href="/bibletrivia">Bible Trivia</Link>
                 </li>
             </ul>
         </nav>
@@ -97,13 +97,13 @@ const triviaNavbar = () => {
                     <Link href="/">Home</Link>
                 </li>
                 <li>
+                    <Link href="/about">About</Link>
+                </li>
+                <li>
                     <Link href="/reading">Reading</Link>
                 </li>
                 <li>
-                    <Link href="/prayer-request">Prayer Request</Link>
-                </li>
-                <li>
-                    <Link href="/bible-trivia">Bible Trivia</Link>
+                    <Link href="/prayerrequest">Prayer Request</Link>
                 </li>
             </ul>
         </nav>
