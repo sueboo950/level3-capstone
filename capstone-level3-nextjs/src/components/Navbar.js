@@ -25,7 +25,7 @@ const Navbar = () => {
 };
 
 
-const aboutNavbar = () => {
+const AboutNavbar = () => {
     return (
         <nav>
             <ul>
@@ -47,7 +47,7 @@ const aboutNavbar = () => {
 };
 
 
-const readingNavbar = () => {
+const ReadingNavbar = () => {
     return (
         <nav>
             <ul>
@@ -68,7 +68,7 @@ const readingNavbar = () => {
     );
 };
 
-const prayerNavbar = () => {
+const PrayerNavbar = () => {
     return (
         <nav>
             <ul>
@@ -89,7 +89,7 @@ const prayerNavbar = () => {
     );
 };
 
-const triviaNavbar = () => {
+const TriviaNavbar = () => {
     return (
         <nav>
             <ul>
@@ -112,4 +112,4 @@ const triviaNavbar = () => {
 
 
 
-export { Navbar, aboutNavbar, readingNavbar, triviaNavbar, prayerNavbar };
+export { Navbar, AboutNavbar, ReadingNavbar, TriviaNavbar, PrayerNavbar };
