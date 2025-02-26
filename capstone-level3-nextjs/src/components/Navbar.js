@@ -8,6 +8,71 @@ const Navbar = () => {
         <nav>
             <ul>
                 <li>
+                    <Link href="/about">About</Link>
+                </li>
+                <li>
+                    <Link href="/biblereading">Reading</Link>
+                </li>
+                <li>
+                    <Link href="/prayerrequest">Prayer Request</Link>
+                </li>
+                <li>
+                    <Link href="/bibletrivia">Bible Trivia</Link>
+                </li>
+            </ul>
+        </nav>
+    );
+};
+
+
+const aboutNavbar = () => {
+    return (
+        <nav>
+            <ul>
+                <li>
+                    <Link href="/">Home</Link>
+                </li>
+                <li>
+                    <Link href="/biblereading">Reading</Link>
+                </li>
+                <li>
+                    <Link href="/prayerrequest">Prayer Request</Link>
+                </li>
+                <li>
+                    <Link href="/bibletrivia">Bible Trivia</Link>
+                </li>
+            </ul>
+        </nav>
+    );
+};
+
+
+const readingNavbar = () => {
+    return (
+        <nav>
+            <ul>
+                <li>
+                    <Link href="/">Home</Link>
+                </li>
+                <li>
+                    <Link href="/about">About</Link>
+                </li>
+                <li>
+                    <Link href="/prayerrequest">Prayer Request</Link>
+                </li>
+                <li>
+                    <Link href="/bibletrivia">Bible Trivia</Link>
+                </li>
+            </ul>
+        </nav>
+    );
+};
+
+const prayerNavbar = () => {
+    return (
+        <nav>
+            <ul>
+                <li>
                     <Link href="/">Home</Link>
                 </li>
                 <li>
@@ -24,4 +89,27 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+const triviaNavbar = () => {
+    return (
+        <nav>
+            <ul>
+                <li>
+                    <Link href="/">Home</Link>
+                </li>
+                <li>
+                    <Link href="/reading">Reading</Link>
+                </li>
+                <li>
+                    <Link href="/prayer-request">Prayer Request</Link>
+                </li>
+                <li>
+                    <Link href="/bible-trivia">Bible Trivia</Link>
+                </li>
+            </ul>
+        </nav>
+    );
+};
+
+
+
+export { Navbar, aboutNavbar, readingNavbar, triviaNavbar, prayerNavbar };
