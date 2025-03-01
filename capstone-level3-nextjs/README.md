@@ -1,4 +1,4 @@
-Bible Prayer Requests
+##Bible Prayer Requests
 Unfortunately, I was unable to get react.dev working correctly with the project. This project was created using the React framework of Next.js and deployed via Vercel.
 
 With the use of Next.js, webpack and babel is already installed with in the folder node_modules that is a part of the project folder named capstone-level3-nextjs. No BrowserRoute branch nor file was created as with Next.js version that is not needed because all routes are handled with app.js which is in the folder named as above as well. With each page located in the src/pages/___ already being a router due to it already being located within that folder.
@@ -34,7 +34,7 @@ Based upon the user input, one of these statements are presented to the user upo
 
 Redesign for use with react next.js is setup and deployed via vercel (see link above). Below is how to setup the project on your local machine:
 
-Launch Next.js Steps
+##Launch Next.js Steps
 This is a Next.js project bootstrapped with create-next-app.
 
 Getting Started
