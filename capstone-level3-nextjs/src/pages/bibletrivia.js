@@ -1,7 +1,7 @@
 import React from 'react';
-import { TriviaHeroSection } from './components/HeroSection'
-import NavBar from './components/Navbar';
-import HelpResources from './components/HelpfulResources';
+import { TriviaHeroSection } from '../components/HeroSection'
+import NavBar from '../components/Navbar';
+import HelpResources from '../components/HelpfulResources';
 
 
 const BibleTrivia = () => {

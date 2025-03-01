@@ -1,7 +1,7 @@
 import React from 'react';
-import { PrayerHeroSection } from './components/HeroSection';
-import HelpResources from './components/HelpfulResources';
-import NavBar from './components/Navbar';
+import { PrayerHeroSection } from '../components/HeroSection';
+import HelpResources from '../components/HelpfulResources';
+import NavBar from '../components/Navbar';
 
 const HomePage = () => {
     return (

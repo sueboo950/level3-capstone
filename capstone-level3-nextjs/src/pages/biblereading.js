@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { BibleReadingHeroSection } from './components/HeroSection';
-import BibleReading from './components/BibleReading';
-import { fetchVerse, saveToLocalStorage, getFromLocalStorage } from './utils/apiUtils';
-import NavBar from './components/Navbar';
-import HelpResources from './components/HelpfulResources';
+import { BibleReadingHeroSection } from '../components/HeroSection';
+import BibleReading from '../components/BibleReading';
+import { fetchVerse, saveToLocalStorage, getFromLocalStorage } from '../utils/apiUtils';
+import NavBar from '../components/Navbar';
+import HelpResources from '../components/HelpfulResources';
 
 const BibleReadingPage = () => {
     const [userInput, setUserInput] = useState('');

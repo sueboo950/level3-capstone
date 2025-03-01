@@ -1,8 +1,8 @@
 import React from 'react';
-import NavBar from './components/Navbar';
-import AboutImage from './components/AboutImage';
-import AboutContent from './components/AboutContent';
-import HelpResources from './components/HelpfulResources';
+import NavBar from '../components/Navbar';
+import AboutImage from '../components/AboutImage';
+import AboutContent from '../components/AboutContent';
+import HelpResources from '../components/HelpfulResources';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const About = () => (
