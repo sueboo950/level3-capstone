@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { handlePrayerRequest, loadLastPrayerRequest } from '../../controllers/handlePrayerRequest';
+import { handlePrayerRequest, loadLastPrayerRequest } from '../controllers/handlePrayerRequest';
 
 const PrayerRequestForm = () => {
     const [prayerRequest, setPrayerRequest] = useState('');
