@@ -1,22 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { fetchVerse, saveToLocalStorage, getFromLocalStorage } from '../utils/apiUtils'; // Adjust the import path as necessary
 
-// Utility functions
-const fetchVerse = async (keyword) => {
-    const url = `https://bible-api.com/${keyword}`;
-    const response = await fetch(url);
-    return await response.json();
-};
-
-const saveVerseToLocalStorage = (key, value) => {
-    localStorage.setItem(key, JSON.stringify(value));
-};
-
-const getVerseFromLocalStorage = (key) => {
-    const value = localStorage.getItem(key);
-    return JSON.parse(value);
-};
-
-// React component
 const BibleVerseComponent = () => {
     const [keyword, setKeyword] = useState('');
     const [verse, setVerse] = useState(null);
@@ -24,11 +8,11 @@ const BibleVerseComponent = () => {
     const handleFetchVerse = async (keyword) => {
         const fetchedVerse = await fetchVerse(keyword);
         setVerse(fetchedVerse);
-        saveVerseToLocalStorage('lastFetchedVerse', fetchedVerse);
+        saveToLocalStorage('lastFetchedVerse', fetchedVerse);
     };
 
     useEffect(() => {
-        const storedVerse = getVerseFromLocalStorage('lastFetchedVerse');
+        const storedVerse = getFromLocalStorage('lastFetchedVerse');
         if (storedVerse) {
             setVerse(storedVerse);
         }

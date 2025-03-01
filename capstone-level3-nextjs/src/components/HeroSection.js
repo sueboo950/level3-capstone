@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import PrayerRequestForm from './PrayerRequestForm';
-import TriviaComponent from './TriviaComponent';
+import PrayerRequestForm from '../components/PrayerRequestForm';
+import TriviaComponent from '../components/TriviaComponent';
 
 const HeroSection = () => {
     useEffect(() => {
