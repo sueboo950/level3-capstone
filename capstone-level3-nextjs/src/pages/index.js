@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import NavBar from '../pages/components/Navbar';
-import { HeroSection } from './components/HeroSection';
-import HelpResources from '../pages/components/HelpfulResources';
-import HomePageController from '../pages/controllers/HomePageController';
+import NavBar from '../components/Navbar';
+import { HeroSection } from '../components/HeroSection';
+import HelpResources from '../components/HelpfulResources';
+import HomePageController from '../controllers/HomePageController';
 
 
 const IndexPage = () => {
