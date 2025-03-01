@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* global.css */
+
+/* Carousel Styles */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-inner {
+  display: flex; /* Ensure carousel items are aligned horizontally */
+  width: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  margin: 0 10px; /* Adjust margin as needed */
+  padding: 10px; /* Adjust padding as needed */
+  background: transparent; /* Keep background transparent */
+  border: none; /* Remove border */
+}
+
+/* Optional: Adjusting carousel control buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Make the control icons white */
+}
+
+/* Optional: Ensure cards are centered */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
 .hero-image {
   background-image: linear-gradient(rgba(256,256,256,0), rgba(256,256,256,1)), url(/public/prayerwithbible.png);
   height: 85vh;

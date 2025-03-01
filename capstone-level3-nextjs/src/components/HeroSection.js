@@ -13,13 +13,14 @@ const HeroSection = () => {
 
     return (
         <div className="hero-image" style={{ position: 'relative', overflow: 'hidden', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Image
-                src="/prayerwithbible.png" // Path to the image in the public folder
-                alt="Prayer with Bible"
-                layout="fill"
-                objectFit="cover"
-                style={{ opacity: 0.6 }}
-            />
+            <div style={{ position: 'absolute', width: '100%', height: '100%' }}>
+                <Image
+                    src="/prayerwithbible.png"
+                    alt="Prayer with Bible"
+                    fill
+                    style={{ objectFit: 'cover', opacity: 0.6 }}
+                />
+            </div>
             <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel" style={{ position: 'relative', zIndex: 1, width: '100%' }}>
                 <div className="carousel-inner" style={{ height: '100%', width: '100%' }}>
                     <div className="carousel-item active" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%' }}>
