@@ -7,6 +7,15 @@ const ResourceLinks = () => {
         { text: "Addiction Anonymous", url: "https://alladdictsanonymous.org/" },
     ];
 
+    // Add a console log to ensure links is an array
+    console.log("ResourceLinks - links:", links);
+
+    // Check if links is an array before mapping
+    if (!Array.isArray(links)) {
+        console.error("ResourceLinks - links is not an array:", links);
+        return null;
+    }
+
     return (
         <div>
             <h2>Resource Links</h2>
@@ -22,4 +31,3 @@ const ResourceLinks = () => {
 };
 
 export default ResourceLinks;
-
