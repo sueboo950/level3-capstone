@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchVerse, saveToLocalStorage, getFromLocalStorage } from '../utils/utils'; // Adjust the import path as necessary
+import { fetchVerse, saveToLocalStorage, getFromLocalStorage } from '../utils/apiUtils'; // Adjust the import path as necessary
 
 const BibleVerseComponent = () => {
     const [keyword, setKeyword] = useState('');
