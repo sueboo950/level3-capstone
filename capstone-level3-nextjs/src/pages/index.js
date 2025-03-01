@@ -1,14 +1,22 @@
-import { NavBar } from '../components/Navbar';
-import HeroSection from '../components/HeroSection';
+import React, { useEffect } from 'react';
+import NavBar from '../pages/components/Navbar';
+import { HeroSection } from './components/HeroSection';
+import HelpResources from '../pages/components/HelpfulResources';
+import HomePageController from '../pages/controllers/HomePageController';
 
 
-const Index = () => {
+const IndexPage = () => {
+  useEffect(() => {
+    HomePageController.handlePageLoad();
+  }, []);
+
   return (
     <div>
       <NavBar />
       <HeroSection />
+      <HelpResources />
     </div>
   );
 };
 
-export default Index;
+export default IndexPage;

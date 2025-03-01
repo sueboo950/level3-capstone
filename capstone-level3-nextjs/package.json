@@ -1,5 +1,5 @@
 {
-  "name": "capstone-level3-nextjs",
+  "name": "capstone-level3",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "next": "15.1.7",
+    "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
